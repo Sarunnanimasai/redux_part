@@ -7,6 +7,7 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action) => {
+      //if you want to add more than one value in action.payload, create an object like const {email, password} = action.payload, while using dispatch, write it like this dispatch(addUser({email, password}))
       const obj = {
         id: Date.now(),
         todo: action.payload,
